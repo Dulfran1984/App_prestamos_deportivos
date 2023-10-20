@@ -286,6 +286,7 @@
             this.Controls.Add(this.txt_smombre);
             this.Controls.Add(this.txt_pnombre);
             this.Controls.Add(this.txt_id);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frm_ModuloUsuarios";
             this.Text = "MÓDULO - REGISTRO USUARIOS";
             this.ResumeLayout(false);
