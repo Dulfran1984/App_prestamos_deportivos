@@ -62,6 +62,12 @@
     <Compile Include="frm_ModuloUsuarios.Designer.cs">
       <DependentUpon>frm_ModuloUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_prestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_prestamos.Designer.cs">
+      <DependentUpon>frm_prestamos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_implementos.resx">
@@ -69,6 +75,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ModuloUsuarios.resx">
       <DependentUpon>frm_ModuloUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_prestamos.resx">
+      <DependentUpon>frm_prestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
