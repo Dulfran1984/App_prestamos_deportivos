@@ -16,7 +16,7 @@ namespace Negocio
         private int int_cantidad;
         cls_Conexion objconect = new cls_Conexion();
 
-        public void fnt_registrar(string codigo, string nombre,string descripcion,float precio,int cantidad)
+        public void fnt_registrar(string codigo, string nombre,string descripcion,double precio,int cantidad)
         {
             SqlCommand con = new SqlCommand("SP_AgregarImplemento", objconect.connection);
             con.CommandType = CommandType.StoredProcedure;

@@ -14,3 +14,5 @@ C:\Users\yoyit\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos
 C:\Users\yoyit\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Presentacion\obj\Debug\Presentacion.frm_implementos.resources
 C:\Users\yoyit\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Presentacion\obj\Debug\Presentacion.frm_login.resources
 C:\Users\yoyit\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Presentacion\obj\Debug\Presentacion.frm_prestamos.resources
+C:\Users\yoyit\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Presentacion\bin\Debug\Negocio.dll
+C:\Users\yoyit\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Presentacion\bin\Debug\Negocio.pdb

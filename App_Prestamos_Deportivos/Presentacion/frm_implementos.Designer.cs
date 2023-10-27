@@ -148,6 +148,7 @@
             this.btn_guardar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_guardar.UseAccentColor = false;
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // btn_actualizar
             // 
