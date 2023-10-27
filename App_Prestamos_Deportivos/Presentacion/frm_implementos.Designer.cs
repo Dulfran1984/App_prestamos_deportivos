@@ -55,6 +55,7 @@
             this.txt_codigo.TabIndex = 0;
             this.txt_codigo.Text = "";
             this.txt_codigo.TrailingIcon = null;
+            this.txt_codigo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_codigo_KeyUp);
             // 
             // txt_nombre
             // 
