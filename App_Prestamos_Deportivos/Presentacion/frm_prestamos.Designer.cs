@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txt_id = new MaterialSkin.Controls.MaterialTextBox();
-            this.txt_nombre = new MaterialSkin.Controls.MaterialTextBox();
             this.txt_codigo = new MaterialSkin.Controls.MaterialTextBox();
             this.txt_descripcion = new MaterialSkin.Controls.MaterialTextBox();
             this.txt_existencias = new MaterialSkin.Controls.MaterialTextBox();
@@ -40,6 +39,7 @@
             this.txt_observaciones = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
             this.btn_agregar = new MaterialSkin.Controls.MaterialButton();
             this.dtg_prestamo = new System.Windows.Forms.DataGridView();
+            this.txt_nombre = new MaterialSkin.Controls.MaterialTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_prestamo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,25 +60,7 @@
             this.txt_id.TabIndex = 0;
             this.txt_id.Text = "";
             this.txt_id.TrailingIcon = null;
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.AnimateReadOnly = false;
-            this.txt_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_nombre.Depth = 0;
-            this.txt_nombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txt_nombre.Hint = "Nombres persona";
-            this.txt_nombre.LeadingIcon = null;
-            this.txt_nombre.Location = new System.Drawing.Point(292, 12);
-            this.txt_nombre.MaxLength = 50;
-            this.txt_nombre.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_nombre.Multiline = false;
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.ReadOnly = true;
-            this.txt_nombre.Size = new System.Drawing.Size(612, 50);
-            this.txt_nombre.TabIndex = 1;
-            this.txt_nombre.Text = "";
-            this.txt_nombre.TrailingIcon = null;
+            this.txt_id.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_id_KeyUp);
             // 
             // txt_codigo
             // 
@@ -271,12 +253,31 @@
             this.dtg_prestamo.Size = new System.Drawing.Size(892, 195);
             this.dtg_prestamo.TabIndex = 11;
             // 
+            // txt_nombre
+            // 
+            this.txt_nombre.AnimateReadOnly = false;
+            this.txt_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_nombre.Depth = 0;
+            this.txt_nombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_nombre.Hint = "Nombre persona";
+            this.txt_nombre.LeadingIcon = null;
+            this.txt_nombre.Location = new System.Drawing.Point(292, 12);
+            this.txt_nombre.MaxLength = 50;
+            this.txt_nombre.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_nombre.Multiline = false;
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(612, 50);
+            this.txt_nombre.TabIndex = 12;
+            this.txt_nombre.Text = "";
+            this.txt_nombre.TrailingIcon = null;
+            // 
             // frm_prestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(914, 491);
+            this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.dtg_prestamo);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.txt_observaciones);
@@ -287,7 +288,6 @@
             this.Controls.Add(this.txt_existencias);
             this.Controls.Add(this.txt_descripcion);
             this.Controls.Add(this.txt_codigo);
-            this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.txt_id);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frm_prestamos";
@@ -301,7 +301,6 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialTextBox txt_id;
-        private MaterialSkin.Controls.MaterialTextBox txt_nombre;
         private MaterialSkin.Controls.MaterialTextBox txt_codigo;
         private MaterialSkin.Controls.MaterialTextBox txt_descripcion;
         private MaterialSkin.Controls.MaterialTextBox txt_existencias;
@@ -312,5 +311,6 @@
         private MaterialSkin.Controls.MaterialMultiLineTextBox2 txt_observaciones;
         private MaterialSkin.Controls.MaterialButton btn_agregar;
         private System.Windows.Forms.DataGridView dtg_prestamo;
+        private MaterialSkin.Controls.MaterialTextBox txt_nombre;
     }
 }

@@ -43,5 +43,12 @@ namespace Presentacion
                 txt_valor.Text = Convert.ToString(objConsultar.getValor());
             }
         }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            cls_implementos objActualizar = new cls_implementos();
+            objActualizar.fnt_actualizar(txt_codigo.Text, txt_nombre.Text, txt_descripcion.Text,
+                Convert.ToDouble(txt_valor.Text), Convert.ToInt16(txt_cantidad.Text));
+        }
     }
 }

@@ -169,6 +169,7 @@
             this.btn_actualizar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_actualizar.UseAccentColor = false;
             this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // txt_descripcion
             // 

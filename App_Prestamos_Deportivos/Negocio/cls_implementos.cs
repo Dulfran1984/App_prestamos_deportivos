@@ -30,6 +30,20 @@ namespace Negocio
             objconect.connection.Close();
             MessageBox.Show("Implemento registrado con éxito", "Registrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        public void fnt_actualizar(string codigo, string nombre, string descripcion, double precio, int cantidad)
+        {
+            SqlCommand con = new SqlCommand("SP_Actualizar_implemento", objconect.connection);
+            con.CommandType = CommandType.StoredProcedure;
+            con.Parameters.AddWithValue("@codigo", codigo);
+            con.Parameters.AddWithValue("@nombre", nombre);
+            con.Parameters.AddWithValue("@especificaciones", descripcion);
+            con.Parameters.AddWithValue("@cantidad", cantidad);
+            con.Parameters.AddWithValue("@valor", precio);
+            objconect.connection.Open();
+            con.ExecuteNonQuery();
+            objconect.connection.Close();
+            MessageBox.Show("Implemento actualizado con éxito", "Registrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         public void fnt_consultar(string codigo)
         {
             SqlCommand con; SqlDataReader Lectura;
