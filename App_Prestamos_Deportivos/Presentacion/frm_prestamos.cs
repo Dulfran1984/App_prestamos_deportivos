@@ -53,5 +53,30 @@ namespace Presentacion
                 txt_descripcion.Text = objConsultar.get_Especificaciones();
             }
         }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            if(Convert.ToInt16(txt_cantidad_prestamo.Text) <= Convert.ToInt16(txt_existencias.Text))
+            {
+                dtg_prestamo.Rows.Add(
+                txt_codigo.Text, txt_cantidad_prestamo.Text);
+            }
+            else
+            {
+                MessageBox.Show("No puedes superar la cantidad de existencias","Agregar",
+                    MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_prestamo_Click(object sender, EventArgs e)
+        {
+            cls_prestamos obj_prestar = new cls_prestamos();
+            obj_prestar.fnt_prestamo(txt_id.Text, "123.DULFRANMONTAÑO");
+            for(int i = 0; i < dtg_prestamo.RowCount; i++)
+            {
+                obj_prestar.fnt_det_prestamo(Convert.ToString(dtg_prestamo.Rows[i].Cells[0].Value),
+                    Convert.ToInt16(dtg_prestamo.Rows[i].Cells[1].Value));
+            }
+        }
     }
 }

@@ -40,6 +40,8 @@
             this.txt_descripcion = new MaterialSkin.Controls.MaterialTextBox();
             this.txt_existencias = new MaterialSkin.Controls.MaterialTextBox();
             this.txt_nombre_implemento = new MaterialSkin.Controls.MaterialTextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_prestamo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +119,7 @@
             this.btn_prestamo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_prestamo.UseAccentColor = false;
             this.btn_prestamo.UseVisualStyleBackColor = true;
+            this.btn_prestamo.Click += new System.EventHandler(this.btn_prestamo_Click);
             // 
             // btn_cancelar
             // 
@@ -182,6 +185,7 @@
             this.btn_agregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btn_agregar.UseAccentColor = false;
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // dtg_prestamo
             // 
@@ -191,6 +195,9 @@
             this.dtg_prestamo.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dtg_prestamo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtg_prestamo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_prestamo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
             this.dtg_prestamo.Location = new System.Drawing.Point(12, 284);
             this.dtg_prestamo.Name = "dtg_prestamo";
             this.dtg_prestamo.ReadOnly = true;
@@ -269,6 +276,18 @@
             this.txt_nombre_implemento.Text = "";
             this.txt_nombre_implemento.TrailingIcon = null;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Código implemento";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Cantidad prestada";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // frm_prestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,5 +329,7 @@
         private MaterialSkin.Controls.MaterialTextBox txt_descripcion;
         private MaterialSkin.Controls.MaterialTextBox txt_existencias;
         private MaterialSkin.Controls.MaterialTextBox txt_nombre_implemento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
