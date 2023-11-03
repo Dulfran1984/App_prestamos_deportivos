@@ -41,5 +41,17 @@ namespace Presentacion
                 txt_nombre.Text = objConsultarP.getNombre();
             }
         }
+
+        private void txt_codigo_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                cls_prestamos objConsultar = new cls_prestamos();
+                objConsultar.fnt_consultar_implemento(txt_codigo.Text);
+                txt_existencias.Text = ""+objConsultar.getCantidad();
+                txt_nombre_implemento.Text = objConsultar.get_NombreImplemento();
+                txt_descripcion.Text = objConsultar.get_Especificaciones();
+            }
+        }
     }
 }

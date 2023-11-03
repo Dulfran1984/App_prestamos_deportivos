@@ -30,9 +30,6 @@
         {
             this.txt_id = new MaterialSkin.Controls.MaterialTextBox();
             this.txt_codigo = new MaterialSkin.Controls.MaterialTextBox();
-            this.txt_descripcion = new MaterialSkin.Controls.MaterialTextBox();
-            this.txt_existencias = new MaterialSkin.Controls.MaterialTextBox();
-            this.txt_nombre_implemento = new MaterialSkin.Controls.MaterialTextBox();
             this.txt_cantidad_prestamo = new MaterialSkin.Controls.MaterialTextBox();
             this.btn_prestamo = new MaterialSkin.Controls.MaterialButton();
             this.btn_cancelar = new MaterialSkin.Controls.MaterialButton();
@@ -40,6 +37,9 @@
             this.btn_agregar = new MaterialSkin.Controls.MaterialButton();
             this.dtg_prestamo = new System.Windows.Forms.DataGridView();
             this.txt_nombre = new MaterialSkin.Controls.MaterialTextBox();
+            this.txt_descripcion = new MaterialSkin.Controls.MaterialTextBox();
+            this.txt_existencias = new MaterialSkin.Controls.MaterialTextBox();
+            this.txt_nombre_implemento = new MaterialSkin.Controls.MaterialTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_prestamo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,63 +79,7 @@
             this.txt_codigo.TabIndex = 2;
             this.txt_codigo.Text = "";
             this.txt_codigo.TrailingIcon = null;
-            // 
-            // txt_descripcion
-            // 
-            this.txt_descripcion.AnimateReadOnly = false;
-            this.txt_descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_descripcion.Depth = 0;
-            this.txt_descripcion.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txt_descripcion.Hint = "Descripción";
-            this.txt_descripcion.LeadingIcon = null;
-            this.txt_descripcion.Location = new System.Drawing.Point(292, 68);
-            this.txt_descripcion.MaxLength = 50;
-            this.txt_descripcion.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_descripcion.Multiline = false;
-            this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.ReadOnly = true;
-            this.txt_descripcion.Size = new System.Drawing.Size(612, 50);
-            this.txt_descripcion.TabIndex = 3;
-            this.txt_descripcion.Text = "";
-            this.txt_descripcion.TrailingIcon = null;
-            // 
-            // txt_existencias
-            // 
-            this.txt_existencias.AnimateReadOnly = false;
-            this.txt_existencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_existencias.Depth = 0;
-            this.txt_existencias.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txt_existencias.Hint = "Existencias";
-            this.txt_existencias.LeadingIcon = null;
-            this.txt_existencias.Location = new System.Drawing.Point(12, 124);
-            this.txt_existencias.MaxLength = 50;
-            this.txt_existencias.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_existencias.Multiline = false;
-            this.txt_existencias.Name = "txt_existencias";
-            this.txt_existencias.ReadOnly = true;
-            this.txt_existencias.Size = new System.Drawing.Size(273, 50);
-            this.txt_existencias.TabIndex = 4;
-            this.txt_existencias.Text = "";
-            this.txt_existencias.TrailingIcon = null;
-            // 
-            // txt_nombre_implemento
-            // 
-            this.txt_nombre_implemento.AnimateReadOnly = false;
-            this.txt_nombre_implemento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_nombre_implemento.Depth = 0;
-            this.txt_nombre_implemento.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txt_nombre_implemento.Hint = "Nombre del implemento";
-            this.txt_nombre_implemento.LeadingIcon = null;
-            this.txt_nombre_implemento.Location = new System.Drawing.Point(292, 124);
-            this.txt_nombre_implemento.MaxLength = 50;
-            this.txt_nombre_implemento.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_nombre_implemento.Multiline = false;
-            this.txt_nombre_implemento.Name = "txt_nombre_implemento";
-            this.txt_nombre_implemento.ReadOnly = true;
-            this.txt_nombre_implemento.Size = new System.Drawing.Size(612, 50);
-            this.txt_nombre_implemento.TabIndex = 5;
-            this.txt_nombre_implemento.Text = "";
-            this.txt_nombre_implemento.TrailingIcon = null;
+            this.txt_codigo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_codigo_KeyUp);
             // 
             // txt_cantidad_prestamo
             // 
@@ -271,12 +215,69 @@
             this.txt_nombre.Text = "";
             this.txt_nombre.TrailingIcon = null;
             // 
+            // txt_descripcion
+            // 
+            this.txt_descripcion.AnimateReadOnly = false;
+            this.txt_descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_descripcion.Depth = 0;
+            this.txt_descripcion.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_descripcion.Hint = "Descripción";
+            this.txt_descripcion.LeadingIcon = null;
+            this.txt_descripcion.Location = new System.Drawing.Point(292, 68);
+            this.txt_descripcion.MaxLength = 50;
+            this.txt_descripcion.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_descripcion.Multiline = false;
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(612, 50);
+            this.txt_descripcion.TabIndex = 13;
+            this.txt_descripcion.Text = "";
+            this.txt_descripcion.TrailingIcon = null;
+            // 
+            // txt_existencias
+            // 
+            this.txt_existencias.AnimateReadOnly = false;
+            this.txt_existencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_existencias.Depth = 0;
+            this.txt_existencias.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_existencias.Hint = "Existencias";
+            this.txt_existencias.LeadingIcon = null;
+            this.txt_existencias.Location = new System.Drawing.Point(12, 124);
+            this.txt_existencias.MaxLength = 50;
+            this.txt_existencias.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_existencias.Multiline = false;
+            this.txt_existencias.Name = "txt_existencias";
+            this.txt_existencias.Size = new System.Drawing.Size(273, 50);
+            this.txt_existencias.TabIndex = 14;
+            this.txt_existencias.Text = "";
+            this.txt_existencias.TrailingIcon = null;
+            // 
+            // txt_nombre_implemento
+            // 
+            this.txt_nombre_implemento.AnimateReadOnly = false;
+            this.txt_nombre_implemento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_nombre_implemento.Depth = 0;
+            this.txt_nombre_implemento.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_nombre_implemento.Hint = "Nombre implemento";
+            this.txt_nombre_implemento.LeadingIcon = null;
+            this.txt_nombre_implemento.Location = new System.Drawing.Point(292, 124);
+            this.txt_nombre_implemento.MaxLength = 50;
+            this.txt_nombre_implemento.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_nombre_implemento.Multiline = false;
+            this.txt_nombre_implemento.Name = "txt_nombre_implemento";
+            this.txt_nombre_implemento.Size = new System.Drawing.Size(612, 50);
+            this.txt_nombre_implemento.TabIndex = 15;
+            this.txt_nombre_implemento.Text = "";
+            this.txt_nombre_implemento.TrailingIcon = null;
+            // 
             // frm_prestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(914, 491);
+            this.Controls.Add(this.txt_nombre_implemento);
+            this.Controls.Add(this.txt_existencias);
+            this.Controls.Add(this.txt_descripcion);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.dtg_prestamo);
             this.Controls.Add(this.btn_agregar);
@@ -284,9 +285,6 @@
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_prestamo);
             this.Controls.Add(this.txt_cantidad_prestamo);
-            this.Controls.Add(this.txt_nombre_implemento);
-            this.Controls.Add(this.txt_existencias);
-            this.Controls.Add(this.txt_descripcion);
             this.Controls.Add(this.txt_codigo);
             this.Controls.Add(this.txt_id);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -302,9 +300,6 @@
 
         private MaterialSkin.Controls.MaterialTextBox txt_id;
         private MaterialSkin.Controls.MaterialTextBox txt_codigo;
-        private MaterialSkin.Controls.MaterialTextBox txt_descripcion;
-        private MaterialSkin.Controls.MaterialTextBox txt_existencias;
-        private MaterialSkin.Controls.MaterialTextBox txt_nombre_implemento;
         private MaterialSkin.Controls.MaterialTextBox txt_cantidad_prestamo;
         private MaterialSkin.Controls.MaterialButton btn_prestamo;
         private MaterialSkin.Controls.MaterialButton btn_cancelar;
@@ -312,5 +307,8 @@
         private MaterialSkin.Controls.MaterialButton btn_agregar;
         private System.Windows.Forms.DataGridView dtg_prestamo;
         private MaterialSkin.Controls.MaterialTextBox txt_nombre;
+        private MaterialSkin.Controls.MaterialTextBox txt_descripcion;
+        private MaterialSkin.Controls.MaterialTextBox txt_existencias;
+        private MaterialSkin.Controls.MaterialTextBox txt_nombre_implemento;
     }
 }
