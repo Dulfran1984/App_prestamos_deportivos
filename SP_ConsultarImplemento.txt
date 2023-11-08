@@ -1,0 +1,24 @@
+USE [dbs_prestamos_deportivos]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_ConsultarImplemento]    Script Date: 8/11/2023 6:13:24 a. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Dulfran Montaño>
+-- Create date: <Create Date,,26 de octubre del 2023>
+-- Description:	<Description, Consultar implemento>
+-- =============================================
+ALTER procedure [dbo].[SP_ConsultarImplemento]
+@codigo varchar(10)
+as begin
+	select
+	Nombre,
+	Especificaciones,
+	Cantidad,
+	Valor
+	from tbl_implementos
+	where
+	PKCodigo = @codigo
+end

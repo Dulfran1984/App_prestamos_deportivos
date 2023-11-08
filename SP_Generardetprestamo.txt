@@ -1,0 +1,27 @@
+USE [dbs_prestamos_deportivos]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_Generardetprestamo]    Script Date: 8/11/2023 6:15:54 a. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Dulfran Montaño>
+-- Create date: <Create Date,,02 de noviembre del 2023>
+-- Description:	<Description,,Generar det prestamo>
+-- =============================================
+ALTER procedure [dbo].[SP_Generardetprestamo]
+@cod_implemento varchar(10),@cantidad int
+as begin
+	declare @existencias_imp int
+	declare @numero_prestamo bigint
+	select @numero_prestamo = (select max(PKNumero) from tbl_prestamos)
+	select @existencias_imp = (select Cantidad from tbl_implementos where PKCodigo = @cod_implemento)
+	insert into tbl_det_prestamos
+	(FKNumero_tbl_prestamos,FKCodigo_tbl_implementos,Cantidad)
+	values
+	(@numero_prestamo,@cod_implemento,@cantidad)
+
+	update tbl_implementos
+	set Cantidad = (@existencias_imp - @cantidad) where PKCodigo = @cod_implemento
+end

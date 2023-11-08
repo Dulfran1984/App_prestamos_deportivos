@@ -1,0 +1,21 @@
+USE [dbs_prestamos_deportivos]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_AgregarImplemento]    Script Date: 8/11/2023 6:12:44 a. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Dulfran Montaño>
+-- Create date: <Create Date, 26 de octubre del 2023>
+-- Description:	<Description,,Agregar implementos>
+-- =============================================
+ALTER procedure [dbo].[SP_AgregarImplemento]
+@codigo varchar(10),@nombre varchar(80),@especificaciones varchar(5000),
+@cantidad int, @valor float
+as begin
+	insert into tbl_implementos
+	(PKCodigo,Nombre,Especificaciones,Cantidad,Valor,Fecha)
+	values
+	(@codigo,@nombre,@especificaciones,@cantidad,@valor,GETDATE())
+end

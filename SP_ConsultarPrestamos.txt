@@ -1,0 +1,31 @@
+USE [dbs_prestamos_deportivos]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_ConsultarPrestamos]    Script Date: 8/11/2023 6:15:08 a. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Dulfran Montaño>
+-- Create date: <Create Date,,07 de noviembre del 2023>
+-- Description:	<Description,,Consultar prestamos>
+-- =============================================
+ALTER procedure [dbo].[SP_ConsultarPrestamos]
+@id_persona varchar(10)
+as begin
+	select 
+	tbl_det_prestamos.FKNumero_tbl_prestamos as 'Prestamo No.',
+	tbl_implementos.Nombre + ' ' + tbl_implementos.Especificaciones as 'Implemento',
+	tbl_det_prestamos.Cantidad as 'Cantidad',
+	tbl_prestamos.Fecha_registro as 'Fecha de prestamo',
+	tbl_det_prestamos.Fecha_devolucion as 'Fecha devolución',
+	tbl_det_prestamos.Hora_devolucion as 'Hora devolución',
+	tbl_det_prestamos.Observaciones as 'Observaciones'
+	from
+	tbl_det_prestamos,tbl_prestamos,tbl_personas,tbl_implementos
+	where
+	tbl_prestamos.PKNumero = tbl_det_prestamos.FKNumero_tbl_prestamos and
+	tbl_personas.PKId = tbl_prestamos.FKId_tbl_personas and
+	tbl_personas.PKId = @id_persona and 
+	tbl_implementos.PKCodigo = tbl_det_prestamos.FKCodigo_tbl_implementos
+end

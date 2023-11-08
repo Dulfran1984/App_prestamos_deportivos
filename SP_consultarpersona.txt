@@ -1,0 +1,23 @@
+USE [dbs_prestamos_deportivos]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_consultarpersona]    Script Date: 8/11/2023 6:14:32 a. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Dulfran Montaño>
+-- Create date: <Create Date,,31 de octubre del 2023>
+-- Description:	<Description,,Consultar persona>
+-- =============================================
+ALTER procedure [dbo].[SP_consultarpersona]
+@id varchar(10)
+as begin
+	declare @completo varchar(100)
+	select 
+	P_nombre + ' '+ S_nombre + ' ' + P_apellido + ' ' + S_apellido 
+	from
+	tbl_personas
+	where
+	PKId = @id
+end
