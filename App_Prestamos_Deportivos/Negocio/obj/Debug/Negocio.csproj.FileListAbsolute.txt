@@ -4,3 +4,9 @@ C:\Users\yoyit\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos
 C:\Users\yoyit\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 C:\Users\yoyit\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Negocio\obj\Debug\Negocio.dll
 C:\Users\yoyit\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Negocio\obj\Debug\Negocio.pdb
+C:\Users\syste\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Negocio\bin\Debug\Negocio.dll
+C:\Users\syste\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Negocio\bin\Debug\Negocio.pdb
+C:\Users\syste\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\syste\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\syste\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Negocio\obj\Debug\Negocio.dll
+C:\Users\syste\OneDrive\Documentos\GitHub\App_prestamos_deportivos\App_Prestamos_Deportivos\Negocio\obj\Debug\Negocio.pdb

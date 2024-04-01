@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP")]
 [assembly: AssemblyProduct("Presentacion")]
-[assembly: AssemblyCopyright("Copyright © HP 2023")]
+[assembly: AssemblyCopyright("Copyright © HP 2023 Dulfran Antonio Montaño Montaño")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
